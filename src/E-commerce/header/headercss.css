@@ -1,0 +1,80 @@
+.header{
+    background-color: rgb(106, 214, 102);
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header__first{
+    color: white;
+    font-size:25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left:100px;
+
+}
+.header__second{
+    display: flex;
+    align-items: center;
+    background-color: honeydew;
+    border-radius: 3px;
+    
+
+}
+.header__second>input{
+    border:none;
+    outline: none;
+    width:32vw;
+    padding: 10px 15px;
+    border-radius: 3px;
+}
+
+.header__second>.MuiSvgIcon-root{
+    color:rgb(11, 131, 57);
+    font-size: 30px;
+
+}
+
+.header__third>button{
+color: rgb(17, 83, 17);
+border: none;
+outline: none;
+/* height: 37px;
+width: 40px; */
+border-radius: 4px;
+font-size: 15px;
+font-weight: bold;
+cursor: pointer;
+padding: 8px;
+
+}
+
+.header__fourth{
+display: flex;
+align-items: center;
+cursor: pointer;
+}
+
+.header__fourth>span{
+    color: white;
+    font-weight: 600;
+}
+
+.header__fourth>.MuiSvgIcon-root{
+    color: white;
+}
+
+.header__fifth{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-right: 120px;
+    }
+
+    .header__fifth>p{
+        color: white;
+        font-weight: 600;
+    }
+    
+    .header__fifth>.MuiSvgIcon-root{
+        color: white;
+    }

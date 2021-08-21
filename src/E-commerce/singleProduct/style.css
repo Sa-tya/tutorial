@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+.discription img {
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+}
+.discription {
+    display:  flex;
+    flex-flow: row wrap;
+    background-color: whitesmoke;
+}
+.styl {
+    top: 80px !important;
+    right: 80px !important;
+}
+.imgContainer{
+    position: relative;
+    padding: 3%;
+    margin: 2%;
+    flex: 44%;
+    height: auto;
+}
+
+@media (max-width: 800px){
+    .imgContainer, .pDetails {
+        flex: 100%;
+    }
+}
