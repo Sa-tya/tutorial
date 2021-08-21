@@ -2,7 +2,8 @@ import { useSelector } from "react-redux";
 
 function History() {
     const images = useSelector(state => state.data)
-    let order = JSON.parse(localStorage.getItem('order'))
+    if(localStorage.getItem('order'))
+    var order = JSON.parse(localStorage.getItem('order'))
 
     return <div className='catcontainer'>
         {order ? <h1>Your Shoping History</h1> : <h1>You have not Purchached anything</h1>}
