@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { AddinCart, AddinLikes } from "../redux/action";
+import { AddinCart, AddinLikes, RemovetoLikes } from "../redux/action";
 import './catstyle.css'
 import booksname from "../header/bookname";
 function ProductPage({ payload }) {
     const images = useSelector(store => store.data)
+    const likes = useSelector( store => store.likes)
     let t = payload.id === 4 ? 4 : 10;
     const dispatch = useDispatch()
 
@@ -21,12 +22,12 @@ function ProductPage({ payload }) {
                         </div>
                     </Link>
                     <div className='boxdata'>
-                        <h2>{booksname[10 * payload.id + indx][0]} </h2>
+                        <h5><b>{booksname[10 * payload.id + indx][0]}</b> </h5>
                         <p>By <strong>{booksname[10 * payload.id + indx][1]}</strong></p>
-                        <h3>Rs. <strong>{10 * payload.id + indx}</strong></h3>
+                        <h4>Rs.<strong>{10 * payload.id + indx}</strong></h4>
                     </div>
                 
-                    <svg onClick={() => dispatch(AddinLikes(10 * payload.id + indx))} xmlns="http://www.w3.org/2000/svg" width="64" height="64" className="bi bi-heart-fill likebtn" viewBox="0 0 16 16">
+                    <svg onClick={() => likes.includes(`${10 * payload.id + indx}`) ?  dispatch(RemovetoLikes(`${10 * payload.id + indx}`)) : dispatch(AddinLikes(`${10 * payload.id + indx}`))} xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill={likes.includes(`${10 * payload.id + indx}`) ? 'red': 'rgb(216, 41, 216)'} className="bi bi-heart-fill likebtn" viewBox="0 0 16 16">
                         <path fillRule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
                     </svg>
                     
