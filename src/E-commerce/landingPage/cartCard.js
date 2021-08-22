@@ -9,10 +9,10 @@ function CartCard({ id, qty }) {
         <div className="cartimg">
             <img src={images[id].default} alt='cartpic' />
         </div>
-        <div className='cartdata'>
-            <h2>{booksname[id][0]} </h2>
-            <p>Rs. {id} </p>
-            <p>Total : <strong>{id*qty}</strong> </p>
+        <div className='cartdata' style={{padding:'5px',margin:'5px',fontFamily:'monospace'}}>
+            <h5><b>{booksname[id][0]} </b></h5>
+            <p>Rs.{id} </p>
+            <p>Sum: <strong>{id*qty}</strong> </p>
             <div className='counter'>
                 <button onClick={() => dispatch(AddinCart({id:id, qty:(qty ===1 ? 1 : qty-1)}))}>-</button>
                 <h2>{qty}</h2>

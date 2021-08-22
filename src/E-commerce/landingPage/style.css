@@ -15,8 +15,7 @@ img{
 }
 .header {
     display: flex;
-    /* grid-template-columns: auto auto auto auto; */
-    background-color: greenyellow;
+    background-color: rgb(84, 128, 223);
 
 }
 .header h1{
@@ -24,13 +23,14 @@ img{
     font-family: monospace cursive;
     color: white;
     font-weight: 900;
-    /* flex-grow: 3; */
-    text-shadow: 5px 5px black;
+    /* text-shadow: 5px 5px black; */
 }
 .d1 {
     flex-grow: 1;
 }
 .d2 {
+    display: flex;
+    flex-flow: row nowrap;
     flex-grow: 12;
 }
 .header svg{
@@ -55,11 +55,10 @@ img{
     color:rgb(46, 37, 34);
 }
 .img:hover{
-transform: scale(1.05,1.05);
-opacity: 0.9;
+    transform: scale(1.05,1.05);
+    opacity: 0.9;
 }
 .cart {
-    /* width: 100%; */
     padding: 50px;
     display: flex;
     flex: 75%;
@@ -110,6 +109,7 @@ opacity: 0.9;
     background-color: white;
     border-radius: 10px;
     height: fit-content;
+    font-family: monospace;
     box-shadow: 2px 2px 2px 2px black;
     padding: 20px;
     flex: 20%;
@@ -122,7 +122,7 @@ button {
 .likebtn {
     position: absolute;
     top: 20px;
-    fill: rgb(216, 41, 216);
+    /* fill: rgb(216, 41, 216); */
     z-index: 2;
     right: 20px;
 }
@@ -192,5 +192,9 @@ svg:hover{
     }
     .header h1{
         font-size: 30px;
+    }
+    .header svg{
+        width: 32px;
+        height: 32px;
     }
 }

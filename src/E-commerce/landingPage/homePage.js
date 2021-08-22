@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { AddinCart, AddinLikes } from '../redux/action';
+import { AddinCart, AddinLikes, RemovetoLikes } from '../redux/action';
 import './style.css'
 import booksname from '../header/bookname';
 function Homepage() {
     const images = useSelector(state => state.data)
+    const likes = useSelector(state => state.likes)
     const dispatch = useDispatch();
     return <>
         {/* <section>Slider</section> */}
@@ -17,12 +18,12 @@ function Homepage() {
                             <img src={images[itm].default} alt='test' />
                         </div>
                     </Link>
-                    <section>
-                        <h2>{booksname[itm][0]} </h2>
+                    <section style={{fontFamily: 'monospace', padding: '5px',margin:'5px'}}>
+                        <h5> <b>{booksname[itm][0]}</b></h5>
                         <p>By <b>{booksname[itm][1]}</b></p>
-                        <h3>Rs. <strong>{itm}</strong></h3>
+                        <h5>Rs.<strong>{itm}</strong></h5>
                         {/* <button onClick={() => dispatch(AddinLikes(itm))}> */}
-                        <svg onClick={() => dispatch(AddinLikes(itm))} xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" className="bi bi-heart-fill likebtn" viewBox="0 0 16 16">
+                        <svg onClick={() => likes.includes(itm) ?  dispatch(RemovetoLikes(itm)): dispatch(AddinLikes(itm))} xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill= {likes.includes(itm) ? 'red':"rgb(216, 41, 216)"} className="bi bi-heart-fill likebtn" viewBox="0 0 16 16">
                         <path fillRule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
                     </svg>
                        <svg onClick={() => dispatch(AddinCart({ id: itm, qty: 1 }))} xmlns="http://www.w3.org/2000/svg" width="32" height="32" className="bi bi-cart-plus cartbtn" viewBox="0 0 16 16">

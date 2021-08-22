@@ -14,6 +14,12 @@ function Form() {
         setOption(true)
         setPymnt(true)
         setSbmt(false);
+        var order = [];
+        if(localStorage.getItem('order'))
+        order = JSON.parse(localStorage.getItem('order'))
+        var cart = JSON.parse(localStorage.getItem('cart'))
+        localStorage.setItem('order', JSON.stringify([...order,cart]))
+        // localStorage.removeItem('cart') //JSON.stringify(cart)
     }
     function submit(e) {
         e.preventDefault();
