@@ -11,8 +11,8 @@ function CartCard({ id, qty }) {
         </div>
         <div className='cartdata' style={{padding:'5px',margin:'5px',fontFamily:'monospace'}}>
             <h5><b>{booksname[id][0]} </b></h5>
-            <p>Rs.{id} </p>
-            <p>Sum: <strong>{id*qty}</strong> </p>
+            <p>Rs.{parseInt(id)+1} </p>
+            <p>Sum: <strong>{(parseInt(id)+1)*qty}</strong> </p>
             <div className='counter'>
                 <button onClick={() => dispatch(AddinCart({id:id, qty:(qty ===1 ? 1 : qty-1)}))}>-</button>
                 <h2>{qty}</h2>

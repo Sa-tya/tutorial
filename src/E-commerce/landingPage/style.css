@@ -8,6 +8,7 @@
 }
 body {
     background-color: blanchedalmond;
+    scroll-behavior: smooth;
 }
 img{
     height: 100%;
@@ -15,13 +16,13 @@ img{
 }
 .header {
     display: flex;
-    background-color: rgb(84, 128, 223);
-
+    /* background-color: rgb(84, 128, 223); */
+    background-image: linear-gradient(to right,rgb(167, 82, 8) , peachpuff,  rgb(167, 82, 8) ,peachpuff  );
 }
 .header h1{
     font-size: 60px;
     font-family: monospace cursive;
-    color: white;
+    /* color: white; */
     font-weight: 900;
     /* text-shadow: 5px 5px black; */
 }
@@ -118,6 +119,9 @@ button {
     border: 1px solid black;
     margin: 0 5px;
     cursor: pointer;
+    font-weight: 900;
+    font-size: larger;
+    font-family: monospace;
 }
 .likebtn {
     position: absolute;
@@ -197,4 +201,19 @@ svg:hover{
         width: 32px;
         height: 32px;
     }
+}
+.review {
+    border: 1px solid black;
+    margin: 20px 0;
+}
+.review{
+    font-family: monospace sans-serif;
+    margin: 5px;
+    padding: 5px;
+}
+.review p{
+    margin: 20px;
+}
+.review h5 {
+    margin: 10px;
 }

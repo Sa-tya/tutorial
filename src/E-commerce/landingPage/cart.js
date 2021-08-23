@@ -4,7 +4,7 @@ import CartCard from "./cartCard";
 import { Link } from "react-router-dom";
 function Cart() {
     const cart = useSelector(store => store.cart)
-    const [total, setTotal] = useState(-1)
+    const [total, setTotal] = useState(0)
 
     function calculate() {
         // localStorage.setItem('total',total)
@@ -12,18 +12,18 @@ function Cart() {
     }
     useEffect(() => {
         let t = 0;
-        Object.keys(cart).map((itm) => t += (itm ? itm : 1) * cart[itm].qty)
+        Object.keys(cart).map((itm) => t += (parseInt(itm)+1)* cart[itm].qty); // (itm ? itm : 1) * cart[itm].qty)
         setTotal(t)
     }, [cart])
     return <div className='catcontainer'>
-        {total !== -1 ? <h1>Your Cart</h1>: <h1>Your Cart is Empty</h1>}
+        {total ? <h1>Your Cart</h1>: <h1>Your Cart is Empty</h1>}
         <div className='cartContainer'>
             <div className='cart'>
                 {Object.keys(cart).map((itm, indx) =>
                 <CartCard key={indx} id={itm} qty={cart[itm].qty} />
                 )}
             </div>
-            {total !== -1 ? <div className='invoice'>
+            {total ? <div className='invoice'>
                 <h5>Sum: <strong>{total}.00</strong> </h5>
                 <h6>Discount: <strong>0.00</strong></h6>
                 <h6>Tax: {Math.ceil(total/10)}.00 </h6>

@@ -12,7 +12,7 @@ function Navbar(){
     return <section>
         <Router>
             <Header />
-		<div className="w3-bar w3-aqua">
+		<div className="w3-bar w3-white" id='navbar'>
             <Link to="/"><li className="w3-bar-item w3-button">Home</li></Link>
             <Link to="/Drama"><li className="w3-bar-item w3-button">Drama</li></Link>
             <Link to="/Romantic"><li className="w3-bar-item w3-button">Romantic</li></Link>

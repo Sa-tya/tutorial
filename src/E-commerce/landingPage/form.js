@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
+// import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+// import { vanish } from "../redux/action";
 import './formcss.css'
 function Form() {
+    // const dispatch = useDispatch()
     let [name, setName] = useState();
     let [email, setEmail] = useState();
     let [add, setAdd] = useState();
@@ -20,6 +23,7 @@ function Form() {
         var cart = JSON.parse(localStorage.getItem('cart'))
         localStorage.setItem('order', JSON.stringify([...order,cart]))
         // localStorage.removeItem('cart') //JSON.stringify(cart)
+        // dispatch(vanish())
     }
     function submit(e) {
         e.preventDefault();
@@ -65,6 +69,8 @@ function Form() {
             {sbmt ? <button onClick={()=> payment()}>Payment</button> : ''}
             {pymnt ? <div>
                 <h1>Your payment has been successful ...</h1>
+                <Link to="/"><button>Back</button></Link>
+                <Link to={'/History'}><button>Order History</button> </Link>
                 </div> :'' }
         </div>
     </section>
