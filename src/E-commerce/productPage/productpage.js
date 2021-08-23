@@ -24,7 +24,7 @@ function ProductPage({ payload }) {
                     <div className='boxdata'>
                         <h5><b>{booksname[10 * payload.id + indx][0]}</b> </h5>
                         <p>By <strong>{booksname[10 * payload.id + indx][1]}</strong></p>
-                        <h4>Rs.<strong>{10 * payload.id + indx}</strong></h4>
+                        <h4>Rs.<strong>{10 * payload.id + indx + 1}</strong></h4>
                     </div>
                 
                     <svg onClick={() => likes.includes(`${10 * payload.id + indx}`) ?  dispatch(RemovetoLikes(`${10 * payload.id + indx}`)) : dispatch(AddinLikes(`${10 * payload.id + indx}`))} xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill={likes.includes(`${10 * payload.id + indx}`) ? 'red': 'rgb(216, 41, 216)'} className="bi bi-heart-fill likebtn" viewBox="0 0 16 16">
