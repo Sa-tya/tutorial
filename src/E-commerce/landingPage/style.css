@@ -7,7 +7,8 @@
     margin: 20px;
 }
 body {
-    background-color: blanchedalmond;
+    background-color: white;
+    /* background-color: blanchedalmond; */
     scroll-behavior: smooth;
 }
 img{
@@ -26,13 +27,30 @@ img{
     font-weight: 900;
     /* text-shadow: 5px 5px black; */
 }
+.headcontainer {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
 .d1 {
     flex-grow: 1;
+    position: relative;
+    /* border: 1px solid black; */
+}
+.d1 p{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    padding: 0 5px;
+    border-radius: 15px;
+    border: 1px solid black;
 }
 .d2 {
     display: flex;
     flex-flow: row nowrap;
-    flex-grow: 12;
+    flex-grow: 64;
 }
 .header svg{
     margin: 10px 20px;
@@ -42,12 +60,13 @@ img{
 .img {
     height: 200px;
     width: 200px;
+    margin: 5px auto;
     cursor: pointer;
 }
 .card {
     width: 210px;
-    background-color: rgb(247, 245, 243);
-    padding: 5px;
+    background-color: bisque;
+    /* padding: 5px; */
     border: 1px solid black;
     border-radius: 5px;
     z-index: 1;
@@ -55,7 +74,7 @@ img{
     font-family: cursive;
     color:rgb(46, 37, 34);
 }
-.img:hover{
+.card:hover{
     transform: scale(1.05,1.05);
     opacity: 0.9;
 }
@@ -73,7 +92,7 @@ img{
     display: flex;
     flex-flow: column;
     border-radius: 10px;
-    background-color: white;
+    background-color: bisque;
     width: 320px;
 }
 .cartimg {
@@ -88,7 +107,7 @@ img{
 .likescard {
     position: relative;
     width: 320px;
-    background-color: white;
+    background-color: bisque;
     border-radius: 10px;
     display: flex;
     flex-flow: column;
@@ -216,4 +235,10 @@ svg:hover{
 }
 .review h5 {
     margin: 10px;
+}
+#navbar li {
+    color: white;
+    font-family: monospace;
+    font-weight: 900;
+    font-size: larger;
 }

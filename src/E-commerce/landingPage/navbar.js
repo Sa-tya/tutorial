@@ -7,12 +7,15 @@ import Likes from "./Likes";
 import Cart from "./cart";
 import Header from "./header";
 import Form from "./form";
+// import Slider from './slider';
+
 function Navbar(){
     
     return <section>
         <Router>
+            <header className='headcontainer'>
             <Header />
-		<div className="w3-bar w3-white" id='navbar'>
+		<div className="w3-bar w3-black" id='navbar'>
             <Link to="/"><li className="w3-bar-item w3-button">Home</li></Link>
             <Link to="/Drama"><li className="w3-bar-item w3-button">Drama</li></Link>
             <Link to="/Romantic"><li className="w3-bar-item w3-button">Romantic</li></Link>
@@ -24,6 +27,8 @@ function Navbar(){
             <Link to='/History'><li className='w3-bar-item w3-button'>Order History</li></Link>
             {/* <Link to="/"><li className="w3-bar-item w3-button">Product</li></Link> */}
         </div>
+        </header>
+        {/* <Slider /> */}
             <Switch>
 			<Route exact path='/'> <Home /></Route>
 			<Route exact path='/Drama' > <ProductPage payload={{cat: 'Drama',id:0}} /></Route>
