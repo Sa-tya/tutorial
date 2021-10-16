@@ -14,7 +14,7 @@ function App(){
             <h4>It is a initiative project of 
                 <a href={'https://www.devsnest.in/'}><strong>  DEVSNEST.</strong></a></h4>
             <h5>Which aims to make Education affordable to everyone.</h5>
-            <h4>Developed by : <strong>Delta Team</strong></h4>
+            <h4>Developed by : <a href={'https://github.com/Sa-tya/tutorial'} ><strong>Satya Prakash</strong></a></h4>
         </footer>
     </>
 }
