@@ -11,9 +11,8 @@ function App(){
         <Navbar />
         </Provider>
         <footer>
-            <h4>It is a initiative project of 
-                <a href={'https://www.devsnest.in/'}><strong>  DEVSNEST.</strong></a></h4>
-            <h5>Which aims to make Education affordable to everyone.</h5>
+            <h4>It is a e-commerce project by Satya Prakash, just to show case my frontend skills.</h4>
+            <h5>I have used React, Redux & CSS.</h5>
             <h4>Developed by : <a href={'https://github.com/Sa-tya/tutorial'} ><strong>Satya Prakash</strong></a></h4>
         </footer>
     </>
